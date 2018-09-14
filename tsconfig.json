@@ -10,9 +10,19 @@
     "removeComments": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
+    "keyofStringsOnly": true,
     "strict": true,
+
+	"alwaysStrict": true,
+	"forceConsistentCasingInFileNames": true,
+	"noImplicitAny": true,
+	"noFallthroughCasesInSwitch": true,
+	"strictNullChecks": true,
+
+    "allowSyntheticDefaultImports": true,
+
     "outDir": "build",
-    "lib": ["es6", "es7", "dom"],
+    "lib": ["es6", "es7", "dom", "es2017"],
     "baseUrl": "src",
     "paths": {
       "app/*": ["./app/*"]

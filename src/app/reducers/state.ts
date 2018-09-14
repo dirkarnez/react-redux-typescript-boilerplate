@@ -1,9 +1,9 @@
 import { TodoModel } from 'app/models';
-import { RouterState } from 'react-router-redux';
+import { RouterState } from 'connected-react-router';
 
 export interface RootState {
-  todos: RootState.TodoState;
-  router: RouterState;
+  todos: RootState.TodoState,
+  router?: RouterState
 }
 
 export namespace RootState {
