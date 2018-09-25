@@ -18,8 +18,7 @@ module.exports = {
   },
   output: {
     path: outPath,
-    filename: 'bundle.js',
-    chunkFilename: '[chunkhash].js',
+    filename: '[name]~[chunkhash].js',
     publicPath: '/'
   },
   target: 'web',
@@ -40,7 +39,7 @@ module.exports = {
         use: [
           isProduction && {
             loader: 'babel-loader',
-            options: { plugins: ['react-hot-loader/babel'] }
+            options: { plugins: ['react-hot-loader/babel', 'syntax-dynamic-import'] }
           },
           'ts-loader'
         ].filter(Boolean)
